@@ -20,7 +20,26 @@
 
 <script>
   export default {
-    data () {}
+    data () {
+      return {
+        activePlayer: 'O', // either X or O
+        gameStatus: 'turn', // either turn, win or draw
+        gameStatusMessage: `O's turn`,
+        gameStatusColor: 'statusTurn', // either statusTurn, statusWin, or statusDraw
+        moves: 0,
+        cells: {
+          1: '', 2: '', 3: '',
+          4: '', 5: '', 6: '',
+          7: '', 8: '', 9: '',
+        },
+        // contains all (8) possible win conditions
+        winConditions: [
+          [1,2,3], [4,5,6], [7,8,9], // rows
+          [1,4,7], [2,5,8], [3,6,9] // columns
+          [1,5,9], [3,5,7] // diagonals
+        ],
+      }
+    }
   }
 </script>
 

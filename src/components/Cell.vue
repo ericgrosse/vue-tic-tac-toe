@@ -4,7 +4,13 @@
 
 <script>
     export default {
-      data () {}
+      props: ['name'],
+      data () {
+        return {
+          frozen: false // enables the player to place a mark,
+          mark: '', // holds either X or O to be displayed in the td
+        }
+      }
     }
 </script>
 
