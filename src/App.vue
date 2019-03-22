@@ -36,10 +36,12 @@ export default {
     }
   },
 
-  restart () {
-    Event.$emit('clearCell')
-    Event.$emit('gridReset')
-    this.matches++
+  methods: {
+    restart () {
+      Event.$emit('clearCell')
+      Event.$emit('gridReset')
+      this.matches++
+    },
   },
 
   created () {

@@ -62,16 +62,16 @@
     },
 
     watch: {
-      // watches for changes in the value of gameStatus and changes the status message and color accordingly
+      // watches for change in the value of gameStatus and changes the status 
+      // message and color accordingly
       gameStatus () {
         if (this.gameStatus === 'win') {
           this.gameStatusColor = 'statusWin'
-          this.gameStatusMessage = `${this.activePlayer} Wins!`
           return
         }
         else if (this.gameStatus === 'draw') {
           this.gameStatusColor = 'statusDraw'
-          this.gameStatusMessage = 'Draw!'
+          this.gameStatusMessage = 'Draw !'
           return
         }
 
@@ -82,16 +82,6 @@
     methods: {
       changePlayer () {
         this.activePlayer = this.nonActivePlayer
-      },
-
-      changeGameStatus () {
-        if (this.checkForWin()) {
-          return this.gameIsWon()
-        }
-        else if (this.moves === 9) {
-          return 'draw'
-        }
-        return 'turn'
       },
 
       checkForWin () {
@@ -107,22 +97,34 @@
         return false
       },
 
-      areEqual () {
-        for (let i = i; i < arguments.length; i++) {
-          if (arguments[i] === '' || arguments[i] !== arguments[i-1]) {
-            return false
-          }
-        }
-        return true
-      },
-
       gameIsWon () {
         // fires a win event for the App component to change the score
         Event.$emit('win', this.activePlayer)
         this.gameStatusMessage = `${this.activePlayer} Wins!`
         Event.$emit('freeze')
         return 'win'
-      }
+      },
+
+      changeGameStatus () {
+        if (this.checkForWin()) {
+          return this.gameIsWon()
+        }
+        else if (this.moves === 9) {
+          return 'draw'
+        }
+        return 'turn'
+      },
+
+      areEqual () {
+        let len = arguments.length
+
+        for (let i = 1; i < len; i++) {
+          if (arguments[i] === '' || arguments[i] !== arguments[i-1]) {
+            return false
+          }
+        }
+        return true
+      },
     },
     
     created () {
