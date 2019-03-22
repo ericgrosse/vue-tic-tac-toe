@@ -11,6 +11,7 @@
           mark: '', // holds either X or O to be displayed in the td
         }
       },
+      
       methods: {
         strike () {
           if (!this.frozen) {
@@ -21,7 +22,13 @@
             Event.$emit('strike', this.name)
           }
         },
+
         created () {
+          Event.$on('clearCell', () => {
+            this.mark = ''
+            this.frozen = false
+          })
+
           Event.$on('freeze', () => this.frozen = true)
         }
       }
