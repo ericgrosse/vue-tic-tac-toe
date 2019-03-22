@@ -53,7 +53,6 @@
         if (this.activePlayer === 'O') {
           return 'X'
         }
-
         return 'O'
       }
     },

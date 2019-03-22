@@ -14,6 +14,8 @@
     </div>
 
     <grid></grid>
+
+    <button class="restart" @click="restart">Restart</button>
   
   </div>
 </template>
