@@ -136,6 +136,10 @@
         this.moves++
         this.gameStatus = this.changeGameStatus()
         this.changePlayer()
+
+        if (this.gameStatus === 'turn') {
+          this.gameStatusMessage = `${this.activePlayer}'s turn`
+        }
       })
 
       // listens for a restart button press
