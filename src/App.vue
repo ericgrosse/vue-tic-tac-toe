@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="scoreBoard">
-    <span>O has {{ wins.O }} wins</span>
-    <h2>Score Board</h2>
-    <span>X has {{ wins.X }} wins</span>
+      <span>O has {{ wins.O }} wins</span>
+      <h2>Score Board</h2>
+      <span>X has {{ wins.X }} wins</span>
     </div>
 
     <div id="app">
