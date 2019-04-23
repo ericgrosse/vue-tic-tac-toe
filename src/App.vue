@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="scoreBoard">
-      <span>O has {{ wins.O }} wins</span>
-      <h2>Score Board</h2>
       <span>X has {{ wins.X }} wins</span>
+      <h2>Score Board</h2>
+      <span>O has {{ wins.O }} wins</span>
     </div>
 
     <div id="app">
@@ -52,9 +52,9 @@ export default {
 
 <style>
 body {
-  background-color: #fff;
+  background-color: #01a9f4;
   color: #fff;
-  font-family: 'Dosis', Helvetica, sans-serif;
+  font-family: 'Courier';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -63,23 +63,22 @@ body {
 
 #app {
   margin: 0 auto;
-  max-width: 270px;
+  max-width: 320px;
   color: #34495e;
 }
 
 h1 {
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 3em;
 }
 
 .restart {
-  background-color: #e74c3c;
+  background-color: #c70d0d;
   color: #fff;
   border: 0px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-family: 'Dosis', Helvetica, sans-serif;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-family: 'Courier';
   font-size: 1.4em;
   font-weight: bold;
   margin: 0px;
@@ -99,7 +98,7 @@ h1 {
   align-items: center;
   width: 100%;
   height: 15px;
-  background-color: #16a085;
+  background-color: #1e72e9;
   box-shadow: 10px solid #fff;
   padding: 20px;
   overflow-x: none;

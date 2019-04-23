@@ -44,7 +44,7 @@
   }
 
   .cell:hover {
-    background-color: #7f8c8d;
+    background-color: #7f8c8e;
   }
 
   .cell::after {

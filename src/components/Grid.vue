@@ -32,9 +32,9 @@
 
     data () {
       return {
-        activePlayer: 'O', // either X or O
+        activePlayer: 'X', // either X or O
         gameStatus: 'turn', // either turn, win or draw
-        gameStatusMessage: `O's turn`,
+        gameStatusMessage: `X's turn`,
         gameStatusColor: 'statusTurn', // either statusTurn, statusWin, or statusDraw
         moves: 0,
         cells: {
@@ -154,7 +154,7 @@
 
 <style>
   .grid {
-    background-color: #34495e;
+    background-color: #34495ed4;
     color: #fff;
     width: 100%;
     border-collapse: collapse;
@@ -163,20 +163,20 @@
   .gameStatus {
     margin: 0px;
     padding: 15px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: #f1c40f;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: #ffcc00;
     color: #fff;    
     font-size: 1.4em;
     font-weight: bold;
   }
 
   .statusTurn {
-    background-color: #f1c40f;
+    background-color: #ffcc00;
   }
 
   .statusWin {
-    background-color: #2ecc71;
+    background-color: #2ab163;
   }
 
   .statusDraw {
